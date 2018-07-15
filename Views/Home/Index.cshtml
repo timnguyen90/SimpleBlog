@@ -1,0 +1,21 @@
+@{
+    ViewBag.Title = "Cộng đồng chia sẻ khoa học và công nghệ";
+}
+
+<!--Post Content-->
+<div class="content" id="post_area">
+    @{Html.RenderAction("AllPosts", "Post", new { page = 1 });}
+</div>
+<!--End Post Content-->
+<!--Side bar-->
+<div class="sidebar">
+    <!---Popular-post-->
+    @Html.Action("RecentPosts", "Post")
+    <!--End Popular-post-->
+    <!--Recent Coments-->
+    @Html.Action("RecentComments", "Comment")
+    <!--End Recent Coments-->
+    <div class="clear"></div>
+</div>
+<!--End #sidebar-->
+<div class="clear"></div>
